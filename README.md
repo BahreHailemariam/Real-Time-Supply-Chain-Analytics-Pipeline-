@@ -65,3 +65,25 @@ Store processed data into a structured database (SQLite for demo; can scale to S
 A central SQLite warehouse stored in `data/warehouse/supplychain.db` for analytics and reporting.
 
 ---
+
+### **4️⃣ KPI Calculations & Analytics Layer — Business Metrics Generation**
+
+**Purpose:**  
+Derive operational insights and key performance metrics from the stored data.
+
+**Components:**  
+- `scripts/kpi_calculations.py` computes KPIs and stores results in `kpis` table.  
+- `scripts/kpi_api.py` (optional) exposes these KPIs as a JSON API endpoint for external dashboards.
+
+**Example Metrics:**  
+| KPI | Definition |
+|------|-------------|
+| **On-Time Delivery %** | (# Deliveries completed within 24 hours) / (Total Deliveries) |
+| **Avg Delivery Time (hrs)** | Mean of `delivery_hours` |
+| **Route Efficiency** | Avg stops per vehicle route |
+| **Stock Turnover** | (Total Sales) / (Avg Inventory) |
+
+**Output:**  
+KPI metrics available for dashboards and automated reports.
+
+---
