@@ -46,6 +46,18 @@ RealTime_SupplyChain_Analytics/
 ├── requirements.txt            # Python dependencies
 └── README.md                   # Project documentation
 ```
+
+## ⚙️ Tech Stack
+| Category           | Tools                                         |
+| ------------------ | --------------------------------------------- |
+| **Languages**      | Python, SQL                                   |
+| **Data Streaming** | Apache Kafka, AWS Kinesis                     |
+| **Data Warehouse** | PostgreSQL, Snowflake, or BigQuery            |
+| **Visualization**  | Power BI, Streamlit                           |
+| **Automation**     | Airflow, Cron Jobs, or Lambda                 |
+| **Libraries**      | Pandas, NumPy, SQLAlchemy, Matplotlib, Plotly |
+
+
 ##  Workflow Specification – Real-Time Supply Chain Analytics Demo
 
 This document provides a comprehensive overview of the **end-to-end pipeline workflow** used in the Real-Time Supply Chain Analytics Demo.  
