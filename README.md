@@ -18,8 +18,34 @@ Core Features:
 
 - 🚀 Streamlit app for operational insights and alerts.
 
-🔄 Scheduled ETL automation for continuous updates.
+- 🔄 Scheduled ETL automation for continuous updates.
 
+## 🧩 Project Architecture
+```graphql
+RealTime_SupplyChain_Analytics/
+│
+├── data/
+│   ├── raw/                  # Incoming raw data from ERP, sensors, and APIs
+│   ├── processed/            # Cleaned and normalized datasets
+│   └── warehouse/            # Aggregated data for BI dashboards
+│
+├── scripts/
+│   ├── data_ingestion.py     # Stream data via Kafka or API
+│   ├── transform_data.py     # Data cleaning and transformation
+│   ├── load_to_db.py         # Load to SQL or Snowflake warehouse
+│   ├── kpi_calculations.py   # Compute operational KPIs
+│   ├── streamlit_app.py      # Real-time visualization app
+│   └── automate_etl.py       # Scheduled job automation
+│
+├── dashboard/
+│   └── PowerBI_Report_Spec.md  # Power BI Dashboard layout and DAX measures
+│
+├── docs/
+│   └── Workflow_Spec.md        # Workflow and data pipeline documentation
+│
+├── requirements.txt            # Python dependencies
+└── README.md                   # Project documentation
+```
 ##  Workflow Specification – Real-Time Supply Chain Analytics Demo
 
 This document provides a comprehensive overview of the **end-to-end pipeline workflow** used in the Real-Time Supply Chain Analytics Demo.  
