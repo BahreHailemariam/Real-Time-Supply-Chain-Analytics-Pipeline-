@@ -135,3 +135,23 @@ while True:
 ETL and KPIs refresh continuously without manual intervention.
 
 ---
+
+### **7️⃣ Notifications & Alerts (Optional Enhancements)**
+
+- Slack or Email alerts for KPI deviations (e.g., on-time delivery < 90%).  
+- Integration with Power Automate or Teams for incident escalation.  
+- Predictive modeling extensions using Prophet or ARIMA for forecasting.
+
+---
+
+### **🚀 Summary Table**
+
+| Stage | Key Script | Output |
+|--------|-------------|---------|
+| **1. Ingestion** | `data_ingestion.py` | Simulated real-time data stream |
+| **2. Transformation** | `transform_data.py` | Cleaned CSVs (`data/processed/`) |
+| **3. Warehouse Loading** | `load_to_db.py`, `kpi_calculations.py` | SQLite data tables |
+| **4. KPI Analytics** | `kpi_calculations.py`, `kpi_api.py` | KPI metrics in DB |
+| **5. Visualization** | `streamlit_app.py`, Power BI | Real-time dashboards |
+| **6. Automation** | `automate_etl.py` | Continuous refresh loop |
+| **7. Notifications** | Optional Alerts | Exception-based triggers |
