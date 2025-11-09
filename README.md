@@ -110,3 +110,28 @@ Deliver real-time dashboards for supply chain monitoring and decision-making.
 Dynamic visualization layer powered by both Streamlit and Power BI.
 
 ---
+
+### **6️⃣ Automation — Scheduled ETL and Continuous Updates**
+
+**Purpose:**  
+Ensure that ingestion, transformation, and KPI computation run automatically on a recurring schedule.
+
+**Components:**  
+- `scripts/automate_etl.py` — automates pipeline using Python’s `schedule` library.  
+- Can be scaled up using **Apache Airflow** or **AWS Lambda** for enterprise use.
+
+**Example Schedule Code:**  
+```python
+import schedule, time
+from automate_etl import run_etl
+
+schedule.every(30).seconds.do(run_etl)
+while True:
+    schedule.run_pending()
+    time.sleep(1)
+```
+
+**Output:**  
+ETL and KPIs refresh continuously without manual intervention.
+
+---
