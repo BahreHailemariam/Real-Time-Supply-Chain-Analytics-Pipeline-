@@ -2,6 +2,24 @@
 
 This project demonstrates how to build a real-time analytics pipeline for supply chain operations, integrating live data ingestion, transformation, and dashboard visualization for actionable insights.
 It leverages Python, SQL, Apache Kafka, Power BI, and Streamlit to monitor performance metrics such as order fulfillment, logistics delays, inventory turnover, and supplier performance — all in near real-time.
+
+🧭 Project Overview
+
+Modern supply chains generate vast amounts of data from logistics, warehouse management, and procurement systems.
+This project builds an end-to-end data analytics pipeline that continuously collects, processes, and visualizes operational data, enabling timely decisions in demand forecasting, shipment tracking, and vendor reliability analysis.
+
+Core Features:
+
+- ⏱️ Real-time data ingestion from multiple sources (IoT sensors, ERP exports, supplier APIs).
+
+- ⚙️ Data transformation and cleaning using Python and SQL.
+
+- 📊 Interactive Power BI dashboard for supply chain KPIs.
+
+- 🚀 Streamlit app for operational insights and alerts.
+
+🔄 Scheduled ETL automation for continuous updates.
+
 ##  Workflow Specification – Real-Time Supply Chain Analytics Demo
 
 This document provides a comprehensive overview of the **end-to-end pipeline workflow** used in the Real-Time Supply Chain Analytics Demo.  
