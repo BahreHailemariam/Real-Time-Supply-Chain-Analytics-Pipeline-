@@ -87,3 +87,26 @@ Derive operational insights and key performance metrics from the stored data.
 KPI metrics available for dashboards and automated reports.
 
 ---
+
+### **5️⃣ Visualization & Monitoring — Real-Time Insights**
+
+**Purpose:**  
+Deliver real-time dashboards for supply chain monitoring and decision-making.
+
+**Components:**  
+- **Streamlit App (`scripts/streamlit_app.py`)** — displays live KPIs, trends, and order summaries.  
+- **Power BI Dashboard (`dashboard/PowerBI_Report_Spec.md`)** — includes DAX measures and visual layouts.
+
+**Dashboard Pages:**  
+| Page | Focus | Visuals |
+|-------|--------|----------|
+| Logistics Overview | Delivery time, on-time %, delay trends | Bar & Line Charts |
+| Inventory Health | Stock turnover, reorder alerts | KPI Cards |
+| Supplier Insights | Lead times, reliability | Scatter Plots |
+| Operational Costs | Freight cost, route efficiency | Matrix Tables |
+| Alerts | SLA breaches, real-time warnings | Color Indicators |
+
+**Output:**  
+Dynamic visualization layer powered by both Streamlit and Power BI.
+
+---
