@@ -43,3 +43,25 @@ Standardize, enrich, and clean incoming data for consistency and reliability.
 Clean and analysis-ready datasets in `data/processed/`.
 
 ---
+### **3️⃣ Load to Warehouse and Database Loading — Structured Storage**
+
+**Purpose:**  
+Store processed data into a structured database (SQLite for demo; can scale to Snowflake, BigQuery, or PostgreSQL).
+
+**Components:**  
+- `scripts/load_to_db.py` — performs initial data load.  
+- `scripts/kpi_calculations.py` — updates analytics tables with cleaned data.
+
+**Database Schema:**  
+| Table | Description |
+|--------|-------------|
+| `orders_raw` | Original ERP order data |
+| `route_density_raw` | Raw GPS route data |
+| `orders` | Cleaned and normalized order records |
+| `routes` | Enriched vehicle route data |
+| `kpis` | Computed KPI results |
+
+**Output:**  
+A central SQLite warehouse stored in `data/warehouse/supplychain.db` for analytics and reporting.
+
+---
