@@ -25,3 +25,21 @@ Collect live or batch data from multiple operational systems such as ERP, WMS, G
 Raw and streaming data files stored in `data/raw/` or `data/stream/` for transformation.
 
 ---
+### **2️⃣ Transformation — Data Cleaning and Normalization**
+
+**Purpose:**  
+Standardize, enrich, and clean incoming data for consistency and reliability.
+
+**Components:**  
+- `scripts/transform_data.py` reads new files from `data/stream/`, performs data validation and cleaning, and writes processed results to `data/processed/`.
+
+**Operations:**  
+- Convert timestamps (`order_placed_at`, `delivered_at`) to datetime format.  
+- Calculate `delivery_hours = (delivered_at - order_placed_at)`.  
+- Normalize SKU formats (e.g., `SKU-001`).  
+- Remove duplicates and handle null or inconsistent values.
+
+**Output:**  
+Clean and analysis-ready datasets in `data/processed/`.
+
+---
