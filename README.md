@@ -57,6 +57,15 @@ RealTime_SupplyChain_Analytics/
 | **Automation**     | Airflow, Cron Jobs, or Lambda                 |
 | **Libraries**      | Pandas, NumPy, SQLAlchemy, Matplotlib, Plotly |
 
+## 📊 Key KPIs & Metrics
+
+| Category        | KPI                          | Description                                   |
+| --------------- | ---------------------------- | --------------------------------------------- |
+| **Logistics**   | On-time Delivery %           | Percentage of shipments delivered on schedule |
+| **Inventory**   | Stock Turnover Ratio         | Frequency of inventory replenishment          |
+| **Procurement** | Supplier Lead Time           | Average supplier response time                |
+| **Operations**  | Order Fulfillment Cycle Time | Duration from order to delivery               |
+| **Finance**     | Freight Cost per Order       | Transportation cost efficiency metric         |
 
 ##  Workflow Specification – Real-Time Supply Chain Analytics Demo
 
