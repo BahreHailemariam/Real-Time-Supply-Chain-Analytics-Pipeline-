@@ -225,3 +225,12 @@ ETL and KPIs refresh continuously without manual intervention.
 
 This document defines the layout, visuals, KPIs, and DAX measures used in the Power BI report for the Real-Time Supply Chain Analytics Pipeline.
 The goal is to provide operational visibility, cost optimization, and real-time decision support for logistics and procurement teams.
+
+### 🏗️ Report Structure Overview
+| Page                         | Focus                                        | Primary Users                         |
+| ---------------------------- | -------------------------------------------- | ------------------------------------- |
+| **1. Logistics Overview**    | Shipment status, route performance           | Logistics Manager, Operations Analyst |
+| **2. Inventory Performance** | Stock turnover, SKU trends, reorder alerts   | Inventory Planner, Warehouse Manager  |
+| **3. Supplier Insights**     | On-time delivery & lead time reliability     | Procurement Lead, Vendor Relations    |
+| **4. Operational Costs**     | Freight and warehouse cost analysis          | Finance & Operations                  |
+| **5. Real-Time Alerts**      | Delay detection, KPI deviation notifications | Management Dashboard View             |
