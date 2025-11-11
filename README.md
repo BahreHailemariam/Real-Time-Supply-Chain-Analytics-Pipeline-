@@ -239,7 +239,7 @@ The goal is to provide operational visibility, cost optimization, and real-time 
 ### 1️⃣ Logistics Overview
 **Purpose**
 
-Monitor real-time logistics performance, including on-time delivery, shipment volume, and route deviations.
+Monitor **real-time logistics performance**, including on-time delivery, shipment volume, and route deviations.
 
 **Key KPIs**
 | Metric                 | Definition                          | DAX Formula |
@@ -255,6 +255,7 @@ OnTimeDelivery% = DIVIDE(
 ```
 **| Avg Delivery Time (hrs) |** Average time from order to delivery |
 ```DAX
+
 AvgDeliveryTime = AVERAGE(Orders[DeliveryHours])
 ```
 **| Route Efficiency Score |** Avg stops per route |
@@ -280,3 +281,45 @@ RouteEfficiency = DIVIDE(AVERAGE(Routes[StopsCount]), COUNTROWS(Routes))
 - Detect recurring route inefficiencies
 
 - Track delivery time trends seasonally or regionally
+
+
+## 2️⃣ Inventory Performance
+**Purpose**
+
+Provide **visibility into inventory movement**, **reorder alerts**, and **SKU-level performance**.
+
+**Key KPIs**
+
+| Metric                   | Description                   | DAX Formula |
+| ------------------------ | ----------------------------- | ----------- |
+| **Stock Turnover Ratio** | Measures inventory efficiency |             |
+```
+StockTurnover = DIVIDE(SUM(Inventory[COGS]), AVERAGE(Inventory[AverageStock]))
+```
+**| Reorder Alert Count |** SKUs below reorder threshold |
+```DAX
+
+ReorderAlerts = COUNTROWS(FILTER(Inventory, Inventory[StockQty] < Inventory[ReorderLevel]))
+```
+**| Avg Stock Age (Days) |** Average time products stay in stock |
+```DAX
+
+AvgStockAge = AVERAGE(Inventory[DaysInStock])
+```
+**Visuals**
+
+- **Card visuals:** Stock Turnover, Avg Stock Age
+
+- **Bar chart:** SKU-wise stock turnover rate
+
+- **Table:** Reorder alerts (SKU, warehouse, days remaining)
+
+- **Gauge:** Current stock utilization %
+
+**Insights**
+
+- Detect slow-moving SKUs
+
+- Highlight inventory inefficiencies
+
+- Trigger reorder workflows before stockouts
