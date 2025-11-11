@@ -234,3 +234,49 @@ The goal is to provide operational visibility, cost optimization, and real-time 
 | **3. Supplier Insights**     | On-time delivery & lead time reliability     | Procurement Lead, Vendor Relations    |
 | **4. Operational Costs**     | Freight and warehouse cost analysis          | Finance & Operations                  |
 | **5. Real-Time Alerts**      | Delay detection, KPI deviation notifications | Management Dashboard View             |
+
+
+### 1️⃣ Logistics Overview
+**Purpose**
+
+Monitor real-time logistics performance, including on-time delivery, shipment volume, and route deviations.
+
+**Key KPIs**
+| Metric                 | Definition                          | DAX Formula |
+| ---------------------- | ----------------------------------- | ----------- |
+| **On-Time Delivery %** | % of shipments delivered within SLA |             |
+
+```DAX
+OnTimeDelivery% = DIVIDE(
+    COUNTROWS(FILTER(Orders, Orders[DelayHours] <= 0)),
+    COUNTROWS(Orders)
+)
+
+```
+**| Avg Delivery Time (hrs) |** Average time from order to delivery |
+```DAX
+AvgDeliveryTime = AVERAGE(Orders[DeliveryHours])
+```
+**| Route Efficiency Score |** Avg stops per route |
+```DAX
+
+RouteEfficiency = DIVIDE(AVERAGE(Routes[StopsCount]), COUNTROWS(Routes))
+```
+
+**Visuals**
+
+- **KPI Cards:** On-Time %, Avg Delivery Time
+
+- **Clustered Bar Chart:** Deliveries by Warehouse
+
+- **Map Visualization:** Route deviations by geolocation (from GPS data)
+
+- **Line Chart:** Delivery trend over time
+
+**Insights**
+
+- Identify warehouses with delayed deliveries
+
+- Detect recurring route inefficiencies
+
+- Track delivery time trends seasonally or regionally
