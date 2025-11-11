@@ -283,7 +283,7 @@ RouteEfficiency = DIVIDE(AVERAGE(Routes[StopsCount]), COUNTROWS(Routes))
 - Track delivery time trends seasonally or regionally
 
 
-## 2️⃣ Inventory Performance
+### 2️⃣ Inventory Performance
 **Purpose**
 
 Provide **visibility into inventory movement**, **reorder alerts**, and **SKU-level performance**.
@@ -323,3 +323,51 @@ AvgStockAge = AVERAGE(Inventory[DaysInStock])
 - Highlight inventory inefficiencies
 
 - Trigger reorder workflows before stockouts
+### 3️⃣ Supplier Insights
+**Purpose**
+
+Evaluate **supplier reliability** and **lead times** to improve procurement decisions.
+
+**Key KPIs**
+| Metric                 | Description                           | DAX Formula |
+| ---------------------- | ------------------------------------- | ----------- |
+| **Supplier On-Time %** | % of orders delivered before due date |             |
+
+```DAX
+
+SupplierOnTime% = DIVIDE(
+    COUNTROWS(FILTER(Supplier, Supplier[LeadTimeDays] <= Supplier[ExpectedLeadTime])),
+    COUNTROWS(Supplier)
+)
+```
+**| Avg Lead Time (Days) |** Average time suppliers take to deliver |
+```DAX
+
+AvgLeadTime = AVERAGE(Supplier[LeadTimeDays])
+```
+**| Lead Time Variance |** Consistency of supplier deliveries |
+
+```DAX
+
+LeadTimeVariance = VAR MeanLT = AVERAGE(Supplier[LeadTimeDays])
+RETURN STDEVX.P(Supplier, Supplier[LeadTimeDays] - MeanLT)
+```
+
+**Visuals**
+
+- **Table:** Supplier performance summary
+
+- **Scatter plot:** Lead Time vs. On-Time %
+
+- **Matrix:** Vendor vs. Region performance heatmap
+
+- **Card visuals:** Avg Lead Time, Variance, On-Time %
+
+**Insights**
+
+- Identify unreliable suppliers with high delay rates
+
+- Compare regional lead time variances
+
+- Optimize vendor selection and SLA agreements
+
