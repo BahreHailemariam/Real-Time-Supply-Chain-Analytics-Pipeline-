@@ -220,3 +220,8 @@ ETL and KPIs refresh continuously without manual intervention.
 | **5. Visualization** | `streamlit_app.py`, Power BI | Real-time dashboards |
 | **6. Automation** | `automate_etl.py` | Continuous refresh loop |
 | **7. Notifications** | Optional Alerts | Exception-based triggers |
+
+## 📈 Power BI Dashboard Specification – Real-Time Supply Chain Analytics
+
+This document defines the layout, visuals, KPIs, and DAX measures used in the Power BI report for the Real-Time Supply Chain Analytics Pipeline.
+The goal is to provide operational visibility, cost optimization, and real-time decision support for logistics and procurement teams.
